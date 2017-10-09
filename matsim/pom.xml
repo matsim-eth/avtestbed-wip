@@ -5,7 +5,7 @@
 	<groupId>org.matsim</groupId>
 	<artifactId>matsim</artifactId>
 	<name>MATSim</name>
-	<version>0.9.0-SNAPSHOT</version>
+	<version>0.9.0-avtestbed-wip</version>
 	<description>Multi-Agent Transport Simulation</description>
 	<url>http://ci.matsim.org:8080/job/MATSim_M2/ws/matsim/target/site</url>
 	<inceptionYear>2005</inceptionYear>
@@ -187,7 +187,7 @@
 							<additionalDependency>
 								<groupId>org.matsim</groupId>
 								<artifactId>matsim-tutorial</artifactId>
-								<version>0.9.0-SNAPSHOT</version>
+								<version>0.9.0-avtestbed-wip</version>
 							</additionalDependency>
 						</additionalDependencies>
 						<detectLinks>true</detectLinks>
@@ -448,7 +448,7 @@
 		<dependency>
 			<groupId>org.matsim</groupId>
 			<artifactId>matsim-examples</artifactId>
-			<version>0.9.0-SNAPSHOT</version>
+			<version>0.9.0-avtestbed-wip</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

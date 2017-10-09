@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 import org.matsim.api.core.v01.network.Link;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 import playground.clruch.dispatcher.core.RoboTaxi;
 import playground.sebhoerl.avtaxi.passenger.AVRequest;
 

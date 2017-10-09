@@ -17,7 +17,7 @@ import org.matsim.core.scenario.ScenarioUtils;
 import ch.ethz.idsc.queuey.core.networks.VirtualNetwork;
 import ch.ethz.idsc.queuey.core.networks.VirtualNetworkIO;
 import ch.ethz.idsc.queuey.util.GZHandler;
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 import playground.clruch.analysis.minimumfleetsize.MinimumFleetSizeCalculator;
 import playground.clruch.analysis.minimumfleetsize.MinimumFleetSizeIO;
 import playground.clruch.analysis.performancefleetsize.PerformanceFleetSizeCalculator;

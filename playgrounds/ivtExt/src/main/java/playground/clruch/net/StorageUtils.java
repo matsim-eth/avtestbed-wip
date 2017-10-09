@@ -9,7 +9,7 @@ import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 
 public enum StorageUtils {
     ;

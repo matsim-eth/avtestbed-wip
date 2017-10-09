@@ -17,7 +17,7 @@ import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.scenario.ScenarioUtils;
 
 import ch.ethz.idsc.queuey.core.networks.VirtualNetwork;
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 import ch.ethz.idsc.tensor.Tensor;
 import playground.clruch.ScenarioOptions;
 import playground.clruch.analysis.minimumfleetsize.MinimumFleetSizeCalculator;

@@ -3,7 +3,7 @@ package playground.clruch.utils;
 
 import org.matsim.core.config.ReflectiveConfigGroup;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 
 public class SafeConfig {
     final ReflectiveConfigGroup reflectiveConfigGroup;

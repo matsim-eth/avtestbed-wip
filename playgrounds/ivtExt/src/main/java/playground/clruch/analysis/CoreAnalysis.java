@@ -7,7 +7,6 @@ import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import ch.ethz.idsc.queuey.math.AnalysisUtils;
-import ch.ethz.idsc.queuey.util.GlobalAssert;
 import ch.ethz.idsc.tensor.RealScalar;
 import ch.ethz.idsc.tensor.Scalar;
 import ch.ethz.idsc.tensor.Tensor;
@@ -16,6 +15,7 @@ import ch.ethz.idsc.tensor.alg.Array;
 import ch.ethz.idsc.tensor.alg.Join;
 import ch.ethz.idsc.tensor.red.Mean;
 import ch.ethz.idsc.tensor.red.Quantile;
+import playground.clruch.GlobalAssert;
 import playground.clruch.dispatcher.core.AVStatus;
 import playground.clruch.net.SimulationObject;
 import playground.clruch.net.StorageSupplier;

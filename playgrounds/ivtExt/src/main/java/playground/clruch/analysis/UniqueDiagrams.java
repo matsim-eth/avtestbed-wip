@@ -19,7 +19,7 @@ import org.jfree.data.time.TimeTableXYDataset;
 import org.jfree.ui.RectangleEdge;
 import org.jfree.util.SortOrder;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 import ch.ethz.idsc.tensor.Tensor;
 import ch.ethz.idsc.tensor.alg.Transpose;
 import ch.ethz.idsc.tensor.io.CsvFormat;

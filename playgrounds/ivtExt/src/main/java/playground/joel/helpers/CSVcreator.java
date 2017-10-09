@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.NavigableMap;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 
 /** Created by Joel on 18.03.2017.
  * udpated, refactored clruch */

@@ -22,7 +22,7 @@ import org.matsim.contrib.dvrp.schedule.Task;
 import org.matsim.core.api.experimental.events.EventsManager;
 import org.matsim.core.router.util.TravelTime;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 import playground.clruch.net.SimulationDistribution;
 import playground.clruch.net.SimulationObject;
 import playground.clruch.net.SimulationObjectCompiler;

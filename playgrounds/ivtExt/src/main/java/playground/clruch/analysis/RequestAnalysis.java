@@ -19,8 +19,6 @@ import org.matsim.api.core.v01.population.Population;
 import org.matsim.core.router.util.LeastCostPathCalculator;
 import org.matsim.core.utils.geometry.CoordUtils;
 
-import ch.ethz.idsc.queuey.core.networks.VirtualNetwork;
-import ch.ethz.idsc.queuey.core.networks.VirtualNode;
 import ch.ethz.idsc.tensor.RealScalar;
 import ch.ethz.idsc.tensor.Scalar;
 import ch.ethz.idsc.tensor.Tensor;
@@ -72,27 +70,6 @@ public enum RequestAnalysis {
         return mean.number().doubleValue();
     }
 
-    /**
-     *
-     * @param tData
-     * @param virtualNetwork
-     * @param dt
-     * @param time
-     * @return earth mover's distance (EMD) for this set of requests
-     */
-    public static double calcEMD(TravelData tData, VirtualNetwork virtualNetwork, LeastCostPathCalculator dijkstra, //
-                                 int dt, int time) {
-        Tensor alphaij = tData.getAlphaijPSFforTime(time);
-        AbstractVirtualNodeDest abstractVirtualNodeDest = new KMeansVirtualNodeDest();
-        if (vlDist.length() == 0) {
-            vlDist = Tensors.matrix((i, j) -> vLinkDistance(i, j, virtualNetwork, dijkstra, abstractVirtualNodeDest), //
-                    virtualNetwork.getvNodesCount(), virtualNetwork.getvNodesCount());
-            // System.out.println(vlDist);
-        }
-        RealScalar total = (RealScalar) Total.of(Total.of(alphaij.pmul(vlDist))).multiply(RealScalar.of(dt));
-        return total.number().doubleValue();
-    }
-
     // TODO implement a more accurate version where the returned speed represents a good but low estimation of the average
     // speed of AVs in that slice.
     /**
@@ -118,20 +95,6 @@ public enum RequestAnalysis {
         return network.getLinks().values().stream().mapToDouble(Link::getFreespeed).min().getAsDouble(); // smallest freespeed in network
     }
     
-    private static Scalar vLinkDistance(int i, int j, VirtualNetwork virtualNetwork, //
-                                           LeastCostPathCalculator dijkstra, //
-                                           AbstractVirtualNodeDest abstractVirtualNodeDest) {
-        VirtualNode vi = virtualNetwork.getVirtualNode(i);
-        VirtualNode vj = virtualNetwork.getVirtualNode(j);
-
-        // return RealScalar.of(actualDistance(vi.getCoord(), vj.getCoord())); // euclidean approach
-
-        Node ni = abstractVirtualNodeDest.virtualToReal(vi, false);
-        Node nj = abstractVirtualNodeDest.virtualToReal(vj, true);
-        return RealScalar.of(actualDistance(dijkstra, ni, nj)); // dijkstra approach
-
-    }
-
     // TODO make more realistic, step 1: include factor from Euclidean to Network distance, step 2: full shortest path distance (then also add for LP)
     // euclidean approach
     public static double actualDistance(Coord from, Coord to) {

@@ -12,7 +12,7 @@ import org.matsim.core.controler.Controler;
 import org.matsim.core.router.util.LeastCostPathCalculator;
 import org.matsim.core.utils.misc.Time;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 import ch.ethz.idsc.tensor.io.Export;
 import playground.clruch.analysis.AnalyzeSummary;
 import playground.clruch.analysis.TripDistances;

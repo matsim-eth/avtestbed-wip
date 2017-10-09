@@ -15,7 +15,7 @@ import org.matsim.core.utils.collections.QuadTree;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 import playground.clruch.dispatcher.core.RoboTaxi;
 import playground.clruch.dispatcher.core.UniversalDispatcher;
 import playground.clruch.utils.SafeConfig;

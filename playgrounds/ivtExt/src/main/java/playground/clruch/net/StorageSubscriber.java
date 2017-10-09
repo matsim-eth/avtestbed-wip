@@ -5,7 +5,7 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import ch.ethz.idsc.queuey.util.GlobalAssert;
+import playground.clruch.GlobalAssert;
 import ch.ethz.idsc.queuey.view.util.net.ObjectHandler;
 import ch.ethz.idsc.tensor.io.ObjectFormat;
 

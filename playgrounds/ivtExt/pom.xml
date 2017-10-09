@@ -21,21 +21,6 @@
 		  <artifactId>commons-io</artifactId>
 		  <version>2.4</version>
 	  </dependency>
-  	<dependency>
-  		<groupId>org.matsim.contrib</groupId>
-  		<artifactId>locationchoice</artifactId>
-  		<version>0.9.0-avtestbed-wip</version>
-  	</dependency>
-	  <dependency>
-		  <groupId>org.matsim.contrib</groupId>
-		  <artifactId>socnetsim</artifactId>
-		  <version>0.9.0-avtestbed-wip</version>
-	  </dependency>
-	  <dependency>
-	  	<groupId>org.matsim.contrib</groupId>
-	  	<artifactId>parking</artifactId>
-	  	<version>0.9.0-avtestbed-wip</version>
-	  </dependency>
 	  <dependency>
 		  <groupId>org.geotools</groupId>
 		  <artifactId>gt-geotiff</artifactId>
@@ -47,50 +32,16 @@
 		  <version>3.7</version>
 	  </dependency>
 	  <dependency>
-	  	<groupId>org.matsim.contrib</groupId>
-	  	<artifactId>roadpricing</artifactId>
-	  	<version>0.9.0-avtestbed-wip</version>
-	  </dependency>
-	  <dependency>
-	  	<groupId>org.matsim.contrib</groupId>
-	  	<artifactId>analysis</artifactId>
-	  	<version>0.9.0-avtestbed-wip</version>
-	  </dependency>
-	  <dependency>
-	  	<groupId>org.matsim.contrib</groupId>
-	  	<artifactId>accessibility</artifactId>
-	  	<version>0.9.0-avtestbed-wip</version>
-	  </dependency>
-	  <dependency>
-	  	<groupId>com.fasterxml.jackson.core</groupId>
-	  	<artifactId>jackson-databind</artifactId>
-	  	<version>2.6.3</version>
-	  </dependency>
-	  <dependency>
 	  	<groupId>org.apache.commons</groupId>
 	  	<artifactId>commons-math3</artifactId>
 	  	<version>3.6.1</version>
 	  </dependency>
-	  <dependency>
-		  <groupId>com.jcraft</groupId>
-		  <artifactId>jsch</artifactId>
-		  <version>0.1.54</version>
-	  </dependency>
-	  <dependency>
-		  <groupId>com.github.gunnarfloetteroed</groupId>
-		  <artifactId>java</artifactId>
-		  <version>master</version>
-		  </dependency>
 		  <dependency>
 	  	<groupId>org.matsim.contrib</groupId>
 	  	<artifactId>dvrp</artifactId>
 	  	<version>0.9.0-avtestbed-wip</version>
 	  </dependency>
-	  <dependency>
-	  	<groupId>org.matsim.contrib</groupId>
-	  	<artifactId>taxi</artifactId>
-	  	<version>0.9.0-avtestbed-wip</version>
-	  </dependency>
+
 	  <dependency>
 		  <groupId>org.jdom</groupId>
 		  <artifactId>jdom2</artifactId>

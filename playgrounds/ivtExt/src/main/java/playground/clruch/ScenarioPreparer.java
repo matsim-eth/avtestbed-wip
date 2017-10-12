@@ -51,17 +51,7 @@ public class ScenarioPreparer {
 		boolean populationeliminateWalking = simOptions.getBoolean("populationeliminateWalking");
 		boolean populationchangeModeToAV = simOptions.getBoolean("populationchangeModeToAV");
 		LocationSpec ls = simOptions.getLocationSpec();
-		int numVirtualNodes = simOptions.getInt("numVirtualNodes");
-		boolean completeGraph = simOptions.getBoolean("completeGraph");
 		int maxPopulationSize = simOptions.getInt("maxPopulationSize");
-		int dtTravelData = simOptions.getInt("dtTravelData");
-		boolean calculatePerformanceFleetSize = simOptions.getBoolean("calculatePerformanceFleetSize");
-		boolean centerNetwork = simOptions.getBoolean("centerNetwork");
-		String VIRTUALNETWORKFOLDERNAME = simOptions.getString("virtualNetworkDir");
-		String VIRTUALNETWORKFILENAME = simOptions.getString("virtualNetworkName");
-		String TRAVELDATAFILENAME = simOptions.getString("travelDataName");
-		String MINIMUMFLEETSIZEFILENAME = simOptions.getString("minimumFleetSizeFileName");
-		String PERFORMANCEFLEETSIZEFILENAME = simOptions.getString("performanceFleetSizeFileName");
 
 		// 0) load files
 		Config config = ConfigUtils.loadConfig(configFile.toString());
@@ -129,55 +119,6 @@ public class ScenarioPreparer {
 			}
 		}
 
-		// 3) create virtual Network
-		// TODO make this generic for any VirtualNetwork creators.
-		// VirtualNetwork<Link> virtualNetwork;
-		// if(centerNetwork){
-		// MatsimCenterVirtualNetworkCreator centercreator = new
-		// MatsimCenterVirtualNetworkCreator();
-		// virtualNetwork = centercreator.creatVirtualNetwork(network);
-		// }else{
-		// MatsimKMEANSVirtualNetworkCreator kmeansVirtualNetworkCreator = new
-		// MatsimKMEANSVirtualNetworkCreator();
-		// virtualNetwork =
-		// kmeansVirtualNetworkCreator.createVirtualNetwork(population, network,
-		// numVirtualNodes, completeGraph);
-		// }
-
-		final File vnDir = new File(workingDirectory, VIRTUALNETWORKFOLDERNAME);
-		vnDir.mkdir(); // create folder if necessary
-		// (new VirtualNetworkIO<Link>()).toByte(new File(vnDir,
-		// VIRTUALNETWORKFILENAME), virtualNetwork);
-		System.out.println("saved virtual network byte format to : " + new File(vnDir, VIRTUALNETWORKFILENAME));
-		// PopulationRequestSchedule prs = new
-		// PopulationRequestSchedule(network, population, virtualNetwork);
-		// prs.exportCsv();
-		// 3) generate travelData
-		// TravelData travelData = new TravelData(virtualNetwork, network,
-		// scenario.getPopulation(), dtTravelData);
-		// TravelDataIO.toByte(new File(vnDir, TRAVELDATAFILENAME), travelData);
-		// System.out.println("saved travelData byte format to : " + new
-		// File(vnDir, TRAVELDATAFILENAME));
-
-		{// 4) calculate minimum and performance fleet size and save results
-			// MinimumFleetSizeCalculator minimumFleetSizeCalculator = new
-			// MinimumFleetSizeCalculator(network, population, virtualNetwork,
-			// travelData);
-			// MinimumFleetSizeIO.toByte(new File(vnDir,
-			// MINIMUMFLEETSIZEFILENAME), minimumFleetSizeCalculator);
-
-			if (calculatePerformanceFleetSize) {
-				int maxNumberVehiclesPerformanceCalculator = (int) (population.getPersons().size() * 0.3);
-				// PerformanceFleetSizeCalculator performanceFleetSizeCalculator
-				// = //
-				// new PerformanceFleetSizeCalculator(virtualNetwork,
-				// travelData, maxNumberVehiclesPerformanceCalculator);
-				// PerformanceFleetSizeIO.toByte(new File(vnDir,
-				// PERFORMANCEFLEETSIZEFILENAME),
-				// performanceFleetSizeCalculator);
-			}
-		}
-		// virtualNetwork.printVirtualNetworkInfo();
 		System.out.println("successfully converted simulation data files from in " + workingDirectory);
 	}
 }

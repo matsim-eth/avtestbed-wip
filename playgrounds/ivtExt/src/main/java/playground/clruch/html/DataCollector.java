@@ -31,12 +31,6 @@ public class DataCollector {
 		// collect the data
 		readStopwatch(configFile, outputdirectory);
 
-		String dataFolderName = outputdirectory + "/data";
-		File relativeDirectory = new File(dataFolderName);
-
-		LeastCostPathCalculator dijkstra = EasyDijkstra.prepDijkstra(network);
-//		new TripDistances(dijkstra, population, network, relativeDirectory);
-
 	}
 
 	private void readStopwatch(File configFile, String outputdirectory) {

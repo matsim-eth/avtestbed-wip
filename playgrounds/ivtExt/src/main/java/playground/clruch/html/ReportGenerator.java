@@ -90,7 +90,7 @@ public class ReportGenerator {
                 "\nPopulation:" + //
                 "\nRequests:");
         HtmlUtils.insertTextLeft(scenarioParametersingleton.networkName + //
-                "\n" + scenarioParametersingleton.virtualNodes + //
+//                "\n" + scenarioParametersingleton.virtualNodes + //
                 "\n" + scenarioParametersingleton.populationSize + //
                 "\n" + analyzeSummary.numRequests);
 
@@ -134,13 +134,13 @@ public class ReportGenerator {
                 "\n" + //
                 "\n" + d.format(link2km * analyzeSummary.distanceWithCust / analyzeSummary.numRequests) + " km");
         HtmlUtils.insertImgRight(IMAGE_FOLDER + "/stackedDistance.png", 250, 400);
-        if (scenarioParametersingleton.EMDks != null) {
-            HtmlUtils.newLine();
-            HtmlUtils.insertTextLeft("Minimum Fleet Size:" + //
-                    "\nAverage Earth Movers Distance:");
-            HtmlUtils.insertTextLeft((int) Math.ceil(scenarioParametersingleton.minimumFleet) + //
-                    "\n" + d.format(Mean.of(scenarioParametersingleton.EMDks).Get().number().doubleValue() * link2km) + " km");
-        }
+//        if (scenarioParametersingleton.EMDks != null) {
+//            HtmlUtils.newLine();
+//            HtmlUtils.insertTextLeft("Minimum Fleet Size:" + //
+//                    "\nAverage Earth Movers Distance:");
+//            HtmlUtils.insertTextLeft((int) Math.ceil(scenarioParametersingleton.minimumFleet) + //
+//                    "\n" + d.format(Mean.of(scenarioParametersingleton.EMDks).Get().number().doubleValue() * link2km) + " km");
+//        }
 
         HtmlUtils.insertSubTitle("Wait Times");
         HtmlUtils.insertTextLeft("Requests:");
@@ -172,27 +172,27 @@ public class ReportGenerator {
         HtmlUtils.newLine();
         HtmlUtils.insertImg(IMAGE_FOLDER + "/binnedTimeRatios.png", 800, 600);
         HtmlUtils.insertImg(IMAGE_FOLDER + "/binnedDistanceRatios.png", 800, 600);
-        if (scenarioParametersingleton.EMDks != null) {
-            HtmlUtils.insertTextLeft("Average Trip Distance:");
-            HtmlUtils.insertTextLeft(d.format( //
-                    link2km * analyzeSummary.distanceWithCust / analyzeSummary.numRequests) + " km");
-            HtmlUtils.newLine();
-        }
+//        if (scenarioParametersingleton.EMDks != null) {
+//            HtmlUtils.insertTextLeft("Average Trip Distance:");
+//            HtmlUtils.insertTextLeft(d.format( //
+//                    link2km * analyzeSummary.distanceWithCust / analyzeSummary.numRequests) + " km");
+//            HtmlUtils.newLine();
+//        }
         HtmlUtils.insertImg(IMAGE_FOLDER + "/tripDistances.png", 800, 600);
         HtmlUtils.insertImg(IMAGE_FOLDER + "/distanceDistribution.png", 800, 600);
         HtmlUtils.insertImg(IMAGE_FOLDER + "/totalDistanceVehicle.png", 800, 600);
         HtmlUtils.insertImg(IMAGE_FOLDER + "/dwcVehicle.png", 800, 600);
         HtmlUtils.insertImg(IMAGE_FOLDER + "/statusDistribution.png", 800, 600);
-        if (scenarioParametersingleton.EMDks != null) {
-            HtmlUtils.newLine();
-            HtmlUtils.insertTextLeft("Minimum Fleet Size:" + //
-                    "\nAverage Earth Movers Distance:");
-            HtmlUtils.insertTextLeft((int) Math.ceil(scenarioParametersingleton.minimumFleet) + //
-                    "\n" + d.format(Mean.of(scenarioParametersingleton.EMDks).Get().number().doubleValue() * link2km) + " km");
-            HtmlUtils.newLine();
-            HtmlUtils.insertImg(IMAGE_FOLDER + "/minFleet.png", 800, 600);
-            HtmlUtils.insertImg(IMAGE_FOLDER + "/EMD.png", 800, 600);
-        }
+////        if (scenarioParametersingleton.EMDks != null) {
+////            HtmlUtils.newLine();
+////            HtmlUtils.insertTextLeft("Minimum Fleet Size:" + //
+////                    "\nAverage Earth Movers Distance:");
+////            HtmlUtils.insertTextLeft((int) Math.ceil(scenarioParametersingleton.minimumFleet) + //
+////                    "\n" + d.format(Mean.of(scenarioParametersingleton.EMDks).Get().number().doubleValue() * link2km) + " km");
+//            HtmlUtils.newLine();
+//            HtmlUtils.insertImg(IMAGE_FOLDER + "/minFleet.png", 800, 600);
+//            HtmlUtils.insertImg(IMAGE_FOLDER + "/EMD.png", 800, 600);
+//        }
 
         HtmlUtils.insertImgIfExists(IMAGE_FOLDER + "/availbilitiesByNumberVehicles.png", reportFolder.getAbsolutePath(), 800, 600);
 

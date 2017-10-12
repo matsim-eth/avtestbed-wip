@@ -9,13 +9,11 @@ import java.util.Arrays;
 import org.matsim.api.core.v01.network.Network;
 import org.matsim.api.core.v01.population.Population;
 import org.matsim.core.controler.Controler;
-import org.matsim.core.router.util.LeastCostPathCalculator;
 import org.matsim.core.utils.misc.Time;
 
 import ch.ethz.idsc.tensor.io.Export;
 import playground.clruch.GlobalAssert;
 import playground.clruch.analysis.AnalyzeSummary;
-import playground.joel.helpers.EasyDijkstra;
 
 /** @author Claudio Ruch based on initial version by gjoel */
 public class DataCollector {

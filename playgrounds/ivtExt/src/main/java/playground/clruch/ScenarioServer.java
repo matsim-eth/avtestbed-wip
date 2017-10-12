@@ -23,7 +23,6 @@ import playground.clruch.net.DatabaseModule;
 import playground.clruch.net.MatsimStaticDatabase;
 import playground.clruch.net.SimulationServer;
 import playground.clruch.net.StorageUtils;
-import playground.clruch.traveltimetracker.AVTravelTimeModule;
 import playground.clruch.utils.PropertiesExt;
 import playground.sebhoerl.avtaxi.framework.AVConfigGroup;
 import playground.sebhoerl.avtaxi.framework.AVModule;
@@ -80,7 +79,7 @@ public class ScenarioServer {
 		controler.addOverridingModule(new DynQSimModule<>(AVQSimProvider.class));
 		controler.addOverridingModule(new AVModule());
 		controler.addOverridingModule(new DatabaseModule());
-		controler.addOverridingModule(new AVTravelTimeModule());
+//		controler.addOverridingModule(new AVTravelTimeModule());
 
 		// directories for saving results
 		StorageUtils.OUTPUT = new File(config.controler().getOutputDirectory());

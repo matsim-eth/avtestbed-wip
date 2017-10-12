@@ -17,7 +17,7 @@ import playground.clruch.data.LocationSpec;
 import playground.clruch.prep.NetworkCutClean;
 import playground.clruch.prep.PopulationTools;
 import playground.clruch.prep.TheApocalypse;
-import playground.clruch.util.GZHandler;
+import playground.clruch.utils.GZHandler;
 import playground.clruch.utils.PropertiesExt;
 
 /**

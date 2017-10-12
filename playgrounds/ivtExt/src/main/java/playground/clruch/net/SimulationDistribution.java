@@ -1,7 +1,7 @@
 // code by jph
 package playground.clruch.net;
 
-import ch.ethz.idsc.queuey.view.util.net.ObjectHandler;
+import playground.clruch.view.util.net.ObjectHandler;
 
 public enum SimulationDistribution {
     ;

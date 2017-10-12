@@ -21,20 +21,11 @@ public enum ScenarioOptions {
         returnP.setProperty("fullConfig", "av_config_full.xml");
         returnP.setProperty("simuConfig", "av_config.xml");
         returnP.setProperty("maxPopulationSize", "2000");
-        returnP.setProperty("numVirtualNodes", "10");
-        returnP.setProperty("dtTravelData", "3600");
         returnP.setProperty("completeGraph", "true");
         returnP.setProperty("populationeliminateFreight", "false");
         returnP.setProperty("populationeliminateWalking", "false");
         returnP.setProperty("populationchangeModeToAV", "true");
         returnP.setProperty("waitForClients", "false");
-        returnP.setProperty("virtualNetworkDir", "virtualNetwork");
-        returnP.setProperty("virtualNetworkName", "virtualNetwork");
-        returnP.setProperty("travelDataName", "travelData");
-        returnP.setProperty("calculatePerformanceFleetSize", "false");
-        returnP.setProperty("minimumFleetSizeFileName", "minimumFleetSizeCalculator");
-        returnP.setProperty("performanceFleetSizeFileName", "performanceFleetSizeCalculator");
-        returnP.setProperty("centerNetwork","false");
         return returnP;
     }
 

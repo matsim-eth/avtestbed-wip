@@ -80,10 +80,7 @@ public class ScenarioServer {
 		controler.addOverridingModule(new DynQSimModule<>(AVQSimProvider.class));
 		controler.addOverridingModule(new AVModule());
 		controler.addOverridingModule(new DatabaseModule());
-		// controler.addOverridingModule(new
-		// BlackListedTimeAllocationMutatorStrategyModule());
 		controler.addOverridingModule(new AVTravelTimeModule());
-		// controler.addOverridingModule(new WriteTravelTimesModule());
 
 		// directories for saving results
 		StorageUtils.OUTPUT = new File(config.controler().getOutputDirectory());
@@ -97,22 +94,6 @@ public class ScenarioServer {
 
 		// perform analysis of results
 		AnalyzeSummary analyzeSummary = AnalyzeAll.analyze(configFile, outputdirectory);
-//		VirtualNetwork<Link> virtualNetwork = VirtualNetworkGet.readDefault(scenario.getNetwork());
-
-//		MinimumFleetSizeCalculator minimumFleetSizeCalculator = null;
-//		PerformanceFleetSizeCalculator performanceFleetSizeCalculator = null;
-//		TravelData travelData = null;
-//		if (virtualNetwork != null) {
-//			minimumFleetSizeCalculator = MinimumFleetSizeGet.readDefault();
-//			performanceFleetSizeCalculator = PerformanceFleetSizeGet.readDefault();
-//			if (performanceFleetSizeCalculator != null) {
-//				String dataFolderName = outputdirectory + "/data";
-//				File relativeDirectory = new File(dataFolderName);
-//				performanceFleetSizeCalculator.saveAndPlot(dataFolderName, relativeDirectory);
-//			}
-//
-//			travelData = TravelDataGet.readDefault(virtualNetwork);
-//		}
 
 		DataCollector datacollector = new DataCollector(configFile, outputdirectory, controler, //
 				analyzeSummary, network, population);

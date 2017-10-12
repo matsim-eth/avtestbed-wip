@@ -30,16 +30,11 @@ public enum ScenarioParameters {
 	public final int iterations;
 	public final int redispatchPeriod;
 	public final int rebalancingPeriod;
-	// public final int virtualNodes;
 
 	public final String dispatcher;
 	public final String networkName;
 	public final String user;
 	public final String date;
-
-	// public final Tensor EMDks;
-	// public final Tensor minFleet;
-	// public final double minimumFleet;
 
 	private ScenarioParameters() {
 		File workingDirectory = null;
@@ -74,19 +69,6 @@ public enum ScenarioParameters {
 
 		Network network = scenario.getNetwork();
 		networkName = network.getName();
-
-		// VirtualNetwork<Link> virtualNetwork =
-		// VirtualNetworkGet.readDefault(network);
-		// MinimumFleetSizeCalculator minimumFleetSizeCalculator =
-		// MinimumFleetSizeGet.readDefault();
-		// PerformanceFleetSizeCalculator performanceFleetSizeCalculator =
-		// PerformanceFleetSizeGet.readDefault();
-		// GlobalAssert.that(virtualNetwork != null);
-
-		// virtualNodes = virtualNetwork.getvNodesCount();
-		// minFleet = minimumFleetSizeCalculator.getMinFleet();
-		// EMDks = minimumFleetSizeCalculator.getEMDk();
-		// minimumFleet = minimumFleetSizeCalculator.minimumFleet;
 
 		iterations = config.controler().getLastIteration();
 
